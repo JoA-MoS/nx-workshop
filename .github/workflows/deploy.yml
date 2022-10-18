@@ -18,4 +18,4 @@ jobs:
         with:
           fetch-depth: 0
       - uses: bahmutov/npm-install@v1
-      - run: npx nx affected --target=deploy --prod --base=origin/main --parallel
+      - run: npx nx affected --target=deploy --configuration=production --base=origin/main --parallel
