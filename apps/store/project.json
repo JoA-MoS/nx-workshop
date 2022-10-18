@@ -88,6 +88,13 @@
         "jestConfig": "apps/store/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "surge dist/apps/store ${SURGE_DOMAIN_STORE} --token ${SURGE_TOKEN}"
+      }
     }
   },
   "tags": ["scope:store", "type:app"]
