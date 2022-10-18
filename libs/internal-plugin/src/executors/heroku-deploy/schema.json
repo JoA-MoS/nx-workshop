@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "HerokuDeploy executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "distLocation": {
+      "type": "string"
+    },
+    "herokuAppName": {
+      "type": "string"
+    }
+  },
+  "required": ["distLocation", "herokuAppName"]
+}

@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
-import { RouterModule } from '@angular/router';
-import { appRoutes } from './app.routes';
-import { MatCardModule } from '@angular/material/card';
-import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+import { RouterModule } from '@angular/router';
+import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
+import { environment } from '../environments/environment';
+import { AppComponent } from './app.component';
+import { appRoutes } from './app.routes';
+import { NxWelcomeComponent } from './nx-welcome.component';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -18,7 +19,12 @@ import { HttpClientModule } from '@angular/common/http';
     StoreUiSharedModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'baseUrl',
+      useValue: environment.apiUrl,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

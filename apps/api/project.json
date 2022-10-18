@@ -25,9 +25,34 @@
               "replace": "apps/api/src/environments/environment.ts",
               "with": "apps/api/src/environments/environment.prod.ts"
             }
+          ],
+          "externalDependencies": [
+            "@nestjs/microservices",
+            "@nestjs/microservices/microservices-module",
+            "@nestjs/websockets/socket-module",
+            "class-transformer",
+            "class-validator",
+            "cache-manager",
+            "cache-manager/package.json"
+          ],
+          "assets": [
+            "apps/api/src/assets",
+            { "glob": "Dockerfile", "input": "apps/api", "output": "." }
           ]
         }
       }
+    },
+
+    "deploy": {
+      "executor": "@bg-hoard/internal-plugin:heroku-deploy",
+      "outputs": [],
+      "options": {
+        "distLocation": "dist/apps/api",
+        "herokuAppName": "nx-workshop-jrd-api"
+      },
+      "dependsOn": [
+        { "target": "build", "projects": "self", "params": "forward" }
+      ]
     },
     "serve": {
       "executor": "@nrwl/js:node",
