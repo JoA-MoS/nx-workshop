@@ -3,7 +3,6 @@
   "npmScope": "bg-hoard",
   "implicitDependencies": {
     ".github/workflows/ci.yml": "*",
-    ".github/workflows/nx-conf-rocks.yml.yml": "*",
     ".github/workflows/deploy.yml": "*"
   },
   "tasksRunnerOptions": {
