@@ -7,7 +7,7 @@
     "build": "nx build",
     "test": "nx test",
     "postinstall": "husky install",
-    "pre-commit": "yarn nx workspace-generator update-scope-schema"
+    "pre-commit": "npx nx g @bg-hoard/internal-plugin:update-scope-schema"
   },
   "private": true,
   "devDependencies": {
@@ -30,7 +30,8 @@
     "@nrwl/linter": "15.0.0",
     "@nrwl/nest": "15.0.0",
     "@nrwl/node": "15.0.0",
-    "@nrwl/nx-workshop": "^0.4.5",
+    "@nrwl/nx-cloud": "^14.7.0",
+    "@nrwl/nx-plugin": "^15.0.0",
     "@nrwl/storybook": "15.0.0",
     "@nrwl/workspace": "15.0.0",
     "@storybook/addon-essentials": "~6.5.9",
@@ -49,6 +50,7 @@
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "husky": "^8.0.1",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
     "jest-preset-angular": "~12.2.2",
