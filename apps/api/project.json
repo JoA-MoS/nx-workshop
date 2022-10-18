@@ -15,6 +15,7 @@
         "tsConfig": "apps/api/tsconfig.app.json",
         "assets": ["apps/api/src/assets"]
       },
+
       "configurations": {
         "production": {
           "optimization": true,
@@ -40,7 +41,8 @@
             { "glob": "Dockerfile", "input": "apps/api", "output": "." }
           ]
         }
-      }
+      },
+      "defaultConfiguration": "production"
     },
 
     "deploy": {
