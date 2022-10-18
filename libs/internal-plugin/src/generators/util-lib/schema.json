@@ -28,12 +28,16 @@
         "type": "list",
         "items": [
           {
-            "value": "store",
-            "label": "store"
-          },
-          {
             "value": "api",
             "label": "api"
+          },
+          {
+            "value": "internal",
+            "label": "internal"
+          },
+          {
+            "value": "store",
+            "label": "store"
           },
           {
             "value": "shared",
