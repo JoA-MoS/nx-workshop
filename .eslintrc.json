@@ -14,7 +14,8 @@
             "depConstraints": [
               {
                 "sourceTag": "scope:store",
-                "onlyDependOnLibsWithTags": ["scope:store", "scope:shared"]
+                "onlyDependOnLibsWithTags": ["scope:store", "scope:shared"],
+                "banExternalDependencies": ["@angular/core"]
               },
               {
                 "sourceTag": "scope:shared",
@@ -62,6 +63,11 @@
       "env": {
         "jest": true
       },
+      "rules": {}
+    },
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
       "rules": {}
     }
   ]
