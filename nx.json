@@ -2,7 +2,9 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "bg-hoard",
   "implicitDependencies": {
-    ".github/workflows/ci.yml": "*"
+    ".github/workflows/ci.yml": "*",
+    ".github/workflows/nx-conf-rocks.yml.yml": "*",
+    ".github/workflows/deploy.yml": "*"
   },
   "tasksRunnerOptions": {
     "default": {
