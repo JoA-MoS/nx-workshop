@@ -5,7 +5,9 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "postinstall": "husky install",
+    "pre-commit": "yarn nx workspace-generator update-scope-schema"
   },
   "private": true,
   "devDependencies": {
